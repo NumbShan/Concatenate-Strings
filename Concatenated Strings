@@ -1,0 +1,31 @@
+class Main {
+        public static String concatenateStrings(String strA, String strB) {
+            int lenA = strA.length();
+            int lenB = strB.length();
+        
+            char[] strC = new char[lenA + lenB];
+        
+            int i = 0;
+            while (i < lenA) {
+                strC[i] = strA.charAt(i);
+                i++;
+            }
+        
+            int j = 0;
+            while (i < lenA + lenB) {
+                strC[i] = strB.charAt(j);
+                i++;
+                j++;
+            }
+        
+            return new String(strC);
+        }
+        
+        public static void main(String[] args) {
+            String strA = "Hello ";
+            String strB = "World";
+            
+            String concatenatedString = concatenateStrings(strA, strB);
+            System.out.println("concatenated string: " + concatenatedString);
+    }
+}
